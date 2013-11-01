@@ -1,0 +1,9 @@
+div.plugin-container.tvcontrol
+  h3 TV Status 
+  label.label-success.status.online(data-id="tvstatus", class=('on' == 'on' ? '' : 'hide')) Online
+  label.label-important.status.offline(data-id="tvstatus", class=('on' != 'on' ? '' : 'hide')) Offline
+
+each item in items        
+  div.plugin-container.tvcontrol
+    button.btn.btn-large.socket(type="button", data-socket="tvcontrol-cmd", data-id="#{item._id}", data-value="#{item.cmd}", class=(item.value == '1' ? 'disabled' : ''))
+        | #{item.label}

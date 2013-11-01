@@ -1,0 +1,3 @@
+.plugin-container.tvcontrol:after {
+  content: "TV command";
+}
